@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="de.dcs.mrtodoapp.app.ItemDetailActivity">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+                    <TextView android:text="Content: " />
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:text="@string/hello_world"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+                    <TextView android:text="Category: " />
+
+                    <TextView
+                        android:id="@+id/category"
+                        android:text="@string/hello_world"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+                    <TextView android:text="Deadline: " />
+
+                    <TextView
+                        android:id="@+id/deadline"
+                        android:text="@string/hello_world"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+                    <TextView android:text="Completed: " />
+
+                    <ImageView
+                        android:id="@+id/completed"
+                        android:src="@drawable/ic_action_bad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:name="com.google.android.gms.maps.MapFragment"/>
+
+                <Space
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp" />
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="fill_parent"
+                    android:layout_height="500dp"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5">
+
+
+        <Button
+            android:id="@+id/button_item_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/complete"
+            />
+
+        <Button
+            android:id="@+id/button_item_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            />
+
+        <Button
+            android:id="@+id/button_item_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take photo"
+            />
+
+        <Button
+            android:id="@+id/button_item_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
